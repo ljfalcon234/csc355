@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makin' Forms w/ LJ</title>
+</head>
+<body background="plainpink.jpg" style="color:rgb(117, 22, 98)">
+    
+    <table align="left" border="1">
+        <th>
+        <form>
+            User Name: <input type="text" name="username" />
+        </br>
+        </br>
+            Password: <input type="password" name="password" />
+        </br>
+        </br>
+            Information Area <br />
+            <textarea rows="5" cols="50" name="random-info">
+Input information in this area...</textarea>
+        <br/>
+        <br/>
+            Select One Course: <br/>
+            <input type="radio" name="course" value="math"> Math
+            <input type="radio" name="course" value="english"> English
+            <input type="radio" name="course" value="music"> Music
+            <input type="radio" name="course" value="biology"> Biology
+        <br/>
+        <br/>
+            Select One or More Courses: <br/>
+            <input type="checkbox" name="course" value="on"> Math
+            <input type="checkbox" name="course" value="on"> English
+            <input type="checkbox" name="course" value="on"> Music
+            <input type="checkbox" name="course" value="on"> Biology
+        <br/>
+        <br/>
+            Select One Course:
+            <select name="dropdown">
+                <option value="Math" selected>Math</option>
+                <option value="English" selected>English</option>
+                <option value="History" selected>History</option>
+                <option value="Music" selected>Music</option>
+                <option value="Biology" selected>Biology</option>
+            </select>
+        <br/>
+        <br/>       
+            <input type="submit" name="submit" value="Submit" />
+            <input type="reset" name="reset" value="Reset" />
+        </form>
+        </th>
+    </table>
+    
+</body>
+</html>
