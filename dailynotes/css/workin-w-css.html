@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testin' CSS :D</title>
+
+    <style type="text/css" media="all">
+        /* this is a universal selector. it will apply to everything */
+        /* h1 {color: red;} 
+        *{color: blue;} */
+
+        /* these are descendant selectors. they only apply to the ones that match the labels below. */
+        /* h1 b{color: blue;} */
+        h2 i{color:red;}
+
+        /* these will be child selectors. it is only applicable if the option on the right of > is the immediate child of the option on the left of > */
+        h1 > b{color: purple}
+
+        /* class selectors timeeee. uses .[classname]{color: green;} or smth so that any elements with that .classname will have that style*/
+        .c1{color:royalblue;}
+
+        /* this is an id selector. anywhere with this id will be affected*/
+        #head1{color:brown;}
+
+    </style>
+
+</head>
+<body>
+    <h1 id="head1">CSS Page 1</h1>
+
+    <h1 id="head2">This is the <b>first heading.</b> It is <i>long <b>enough</b> to explain</i> the idea of descendant selectors.</h1>
+    <p class="c1">This is the <b>first</b> paragraph.</p>
+
+    <h2>This <u class="c1">is <i>the</i> second</u> heading.</h2>
+    <p class="c1">This is the second paragraph :D</p>
+
+    <!-- <p style = "color: red;">This is the example of an inline CSS rule. </p> -->
+
+    <!-- What are HTML Attributes?? 
+            - <p class="c1"> ..blah.. </p> 
+            - <h1 class="c1" ..blah.. </h1>
+            - <input class="no">
+            - id's
+                - <h1 id="no_1"> ..blah.. <h1>
+                - <h1 id="no_2"> ..blah.. <h1>
+                - if we use this on a form, each text field would have its own id. on the server-side we would decide how to process the info from the fields using the ids
+            
+    -->
+
+</body>
+</html>
