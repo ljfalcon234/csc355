@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CSS </title>
+    <!-- the sample of an in-file CSS rules -->
+    <style type="text/css" media="all">
+        * { background-color:aqua }
+
+        /* the three paragraphs */
+        #p1 { font-family:'Courier New', Courier, monospace;
+              font-style:normal;
+              font-weight:bold;
+              font-size:large;
+              text-indent:40px;
+              text-align:justify;
+              color:darkslateblue }
+        #p2 { font-family:'Courier New', Courier, monospace;
+              font-style:italic;
+              font-weight:bold;
+              font-size:medium;
+              text-indent:15px;
+              text-align:center;
+              color:darkslateblue }
+        #p3 { font-family:Georgia, 'Times New Roman', Times, serif;
+              font-style:oblique;
+              font-weight:bolder;
+              font-size:small;
+              text-indent:0px;
+              text-align:right;
+              color:red }
+        
+        /** rules for the link at the bottom **/
+        a:link { color:darkred }
+        a:hover { color:darkblue}
+        a:visited {color:darkorchid }
+        a:active { color:darkcyan }
+
+        ol { font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+             font-size:smaller; 
+             color:blue }
+        ul { font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+             font-size:smaller; 
+             color:blue }
+
+    </style>
+    <!--the link to an external CSS file-->
+    <link type="text/css" href=" " media=" all" />
+</head>
+
+<body>
+    <!-- <p style = "color: red;">this is the sample of an inline CSS rule. </p>-->
+    <h2>SMU Computer Science Program Educational Objectives</h2>
+    <p id="p1">Within five years after graduating, students should</p>
+    <ul>
+        <li>Be working as a computing professional, utilizing the knowledge acquired in the BS program,
+            or be enrolled in a graduate program.</li>
+        <li>Be engaged in the computing profession and be utilizing professional skills to make a positive
+            impact on society.</li>
+        <li>Have participated in further professional development, employing the learning skills taught in
+            their program.</li>
+        <li>Be engaged in service to their profession and communities, consistent with the Benedictine
+            tradition to serve.</li>
+    </ul>
+    <p id="p2">The computer science program is embedded in the university's strong liberal arts
+        curriculum. It thereby helps ready its students to pursue a broad range of careers, whether
+        immediately upon graduation or after going on to seek an advanced degree. The program
+        continues to evolve in response to advances in computer science and information technology and
+        the needs of business and industry, in order to prepare its graduates for a lifetime of professional
+        advancement, personal satisfaction, and service to society.
+        Student Outcomes.</p>
+    <ol>
+        <li>An ability to analyze a complex computing problem and to apply principles of computing and
+            other relevant disciplines to identify solutions</li>
+        <li>An ability to design, implement, and evaluate a computing-based solution to meet a given set
+            of computing requirements in the context of the
+            program's discipline</li>
+        <li>An ability to communicate effectively in a variety of professional contexts</li>
+        <li>An ability to recognize professional responsibilities and make informed judgments in
+            computing practice based on legal and ethical principles</li>
+        <li>An ability to function effectively as a member or leader of a team engaged in activities
+            appropriate to the program's discipline</li>
+        <li>An ability to apply computer science theory and software development fundamentals to
+            produce computing-based solutions</li>
+        <li>Please visit SMU catalog for more information or email to the Registrar Office.</li>
+    </ol>
+    <p id="p3">
+        Need more information? <a href="http://www.google.com">Please click here. </a>
+    </p>
+</body>
+
+</html>
