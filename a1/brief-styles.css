@@ -1,0 +1,37 @@
+body { 
+    background:url("galaxy.jpg");
+}
+
+h2 {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:15%;
+    text-align:center;
+    color:aliceblue
+}
+
+ol {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:18%;
+    color:aliceblue
+}
+
+table {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    background-color:black;
+    opacity:0.84;
+    color:aliceblue
+}
+
+.center {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width:25%;
+}
