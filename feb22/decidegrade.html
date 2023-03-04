@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> My Grade Report :) </title>
+    </head>
+
+    <body>
+        <script language="javascript" type="text/javascript">
+
+            document.open()
+
+            var linebreak = "<br />";
+            var grade;
+
+            document.write("<h1 align=center>CSC101 Grade Report :)</h1>")
+
+            var quiz1 = 10;  //5%
+            var quiz2 = 10;  
+            var assignmt1 = 100; //5%
+            var assignmt2 = 100;
+            var assignmt3 = 100;   
+            var assignmt4 = 100;
+            var midterm = 50;   //10%
+            var final = 100;  //40%
+            var project = 20;   //20%
+            
+            var total = quiz1/2 + quiz2/2 + assignmt1*0.05 + assignmt2*0.05 + assignmt3*0.05 + assignmt4*0.05 + midterm/5 + final*0.4 + project;
+
+            document.write("Your current grade total is: " + total);
+            document.write(linebreak);
+            document.write(linebreak);
+
+            /*******
+            - use a if..else if..else statements to decide the letter grade. The rules are below:
+                - if 0<=grade<60 fail
+                - if 60<=grade<70) D
+                - if 70<=grade<80) C
+                - if 80<=grade<90) B
+                - if 90<=grade<=100) A
+            *******/
+
+            if (0 <= total && total < 60) {
+                grade = "fail"
+            }
+            else if (60 <= total && total < 70) {
+                grade = "D"
+            }
+            else if (70 <= total && total < 80) {
+                grade = "C"
+            }
+            else if (80 <= total && total < 90) {
+                
+                grade = "B"
+            }
+            else if (90 <= total && total <= 100) {
+                grade = "A"
+            }
+            else {
+                grade
+            }
+
+            /*******
+            - use a switch statement to print a statement. The rules are below:
+                - if fail, print “try again”
+                - if D, print “not so bad”
+                - if C, print “acceptable”
+                - if B, print “good”
+                - if A, print “very good”
+            *******/
+
+            document.write("Your letter grade is: " + grade);
+            document.write(linebreak)
+
+            switch(grade) {
+                case 'A': document.write("very good" + linebreak); break;
+                case 'B': document.write("acceptable" + linebreak); break;
+                case 'C': document.write("not so bad" + linebreak); break;
+                case 'D': document.write("try again" + linebreak); break;
+            }
+
+        </script>
+    </body>
+</html>

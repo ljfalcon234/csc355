@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CSS and Javascript </title>
+</head>
+
+<body>
+    <script language="javascript" type="text/javascript">
+        /*******
+        - Q1. applying "for" loop to create a table having 3 columns telling the value of a variable, its square, and its cube. A sample is listed below.
+        - Q2. repeat Q1 by applying a "while" loop and a "do--while" loop
+        *******/
+       document.open()
+
+       document.write("i did this with a for loop")
+        document.write("<br/>")
+        document.write("<br/>")
+       document.write("<b>i &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i^2 &nbsp;&nbsp;&nbsp;&nbsp; i^3 </b>")
+       document.write("<br />")
+
+        var start = new Array(0, 1, 2, 3, 4, 5);
+        var i = 0;
+        for (i in start) {
+            if (start[i] < 4) {
+                document.write(i + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (i*i) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (i*i*i) + "<br/>")
+            }           
+            
+            if (start[i] > 3) { 
+                document.write(i + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (i*i) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (i*i*i) + "<br/>")               
+            }
+        }
+
+        document.write("<br/>")
+        document.write("<br/>")
+        document.write("<br/>")
+
+        document.write("this time i did it with a while and do-while loop")
+        document.write("<br/>")
+        document.write("<br/>")
+        document.write("<b>i &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i^2 &nbsp;&nbsp;&nbsp;&nbsp; i^3 </b>")
+        document.write("<br/>")
+        
+
+        var m = 0
+        while (start[m] < 4) {
+            document.write(m + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (m*m) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (m*m*m) + "<br/>")
+            m++
+        }
+        do {
+            document.write(m + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (m*m) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + (m*m*m) + "<br/>")
+            m++
+        } while(start[m] > 3)
+        
+        document.write("<br/>")
+        document.write("<br/>")
+        var str1 = 20;
+        var str2 = "30";
+        var str3 = str1 + str2;
+        document.write(str3)
+
+    </script>
+</body>
+
+</html>
