@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks for Visiting!</title>
+    <link rel="stylesheet" href="my-info.css" type="text/css" media="all">
+</head>
+<body>
+    <form id="formin">
+        <!-- things i need: 
+                text field that collects visitor's name
+                text field that collects visitor's phone number
+                text field that collects visitor's email address
+                three select boxes repping day, month, year
+                text area that collects visitor's comments
+                two buttons named submit and reset (leave action attribute empty)
+        -->
+
+        Visitor Name: <input type="text" name="vis_name" />
+    </br>
+    </br>
+        Phone Number: <input type="text" name="vis_phone" />
+    </br>
+    </br>
+        Email: <input type="text" name="vis_email" />
+    </br>
+    </br>
+        Select Day, Month, and Year:
+        <select name="dropdown" id="day">
+            <option value="1" selected>1</option>
+            <option value="2" selected>2</option>
+            <option value="3" selected>3</option>
+            <option value="4" selected>4</option>
+            <option value="5" selected>5</option>
+            <option value="6" selected>6</option>
+            <option value="7" selected>7</option>
+            <option value="8" selected>8</option>
+            <option value="8" selected>9</option>
+            <option value="10" selected>10</option>
+            <option value="11" selected>11</option>
+            <option value="12" selected>12</option>
+            <option value="13" selected>13</option>
+            <option value="14" selected>14</option>
+            <option value="15" selected>15</option>
+            <option value="16" selected>16</option>
+            <option value="17" selected>17</option>
+            <option value="18" selected>18</option>
+            <option value="19" selected>19</option>
+            <option value="20" selected>20</option>
+            <option value="21" selected>21</option>
+            <option value="22" selected>22</option>
+            <option value="23" selected>23</option>
+            <option value="24" selected>24</option>
+            <option value="25" selected>25</option>
+            <option value="26" selected>26</option>
+            <option value="27" selected>27</option>
+            <option value="28" selected>28</option>
+            <option value="29" selected>29</option>
+            <option value="30" selected>30</option>
+            <option value="31" selected>31</option>
+        </select>
+        <select name="dropdown" id="month">
+            <option value="1" selected>1</option>
+            <option value="2" selected>2</option>
+            <option value="3" selected>3</option>
+            <option value="4" selected>4</option>
+            <option value="5" selected>5</option>
+            <option value="6" selected>6</option>
+            <option value="7" selected>7</option>
+            <option value="8" selected>8</option>
+            <option value="8" selected>9</option>
+            <option value="10" selected>10</option>
+            <option value="11" selected>11</option>
+            <option value="12" selected>12</option>
+        </select>
+        <select name="dropdown" id="year">
+            <option value="2020" selected>2020</option>
+            <option value="2021" selected>2021</option>
+            <option value="2022" selected>2022</option>
+            <option value="2023" selected>2023</option>
+        </select>
+
+        </br>
+        </br>
+        
+        Information Area <br />
+        <textarea id="textin" rows="5" cols="50" name="vis_comments">
+Input your comments about my website here!</textarea>
+
+        </br>
+        </br>
+
+        <input id="submit" type="submit" name="submit" value="Submit" />
+        <input id="reset" type="reset" name="reset" value="Reset" />
+
+    </form>
+</body>
+</html>

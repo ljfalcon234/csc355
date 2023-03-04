@@ -1,0 +1,105 @@
+body { 
+    background:url("galaxy.jpg");
+}
+
+h2 {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:15%;
+    text-align:center;
+    color:aliceblue
+}
+
+ol {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:18%;
+    color:aliceblue
+}
+
+ul {
+    color:aliceblue
+}
+
+#list-info {
+    font-style:normal;
+    font-size:large;
+    font-family:'Courier New', Courier, monospace;
+    color:aliceblue;
+}
+
+table {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    background-color:black;
+    opacity:0.84;
+    color:aliceblue
+}
+
+.center {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width:20%;
+}
+
+.center-wide {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%
+}
+
+a:link {
+    color:grey
+}
+
+a:visited {
+    color:antiquewhite
+}
+
+a:hover {
+    color:blueviolet
+}
+
+a:active {
+    color:aquamarine
+}
+
+p {
+    margin-bottom:auto;
+    margin-top:auto;
+    margin-left:auto;
+    margin-right:auto;
+    width:69%;
+}
+
+#p1 {
+    font-size:larger;
+    color:rgb(255, 188, 99);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#p2 {
+    font-size:large;
+    color:rgb(255, 199, 125);
+    font-family:fantasy;
+}
+#p3 {
+    font-size:medium;
+    color:rgb(253, 222, 181);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#p4 {
+    font-size:small;
+    color:white;
+    font-family:cursive;
+}
+
+#day, #month, #year, #textin, #formin, #reset, #submit {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black
+}
