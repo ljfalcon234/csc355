@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Pizza Price Here! :D</title>
+
+    <script type="text/javascript">
+
+        function fun() {
+            // in here we collect size, toppings, and calc price, also known as x in fun
+            // if x > 100 then apply 10% discount, if 90 <= x <= 100 then apply 5% discount
+
+            // small = 10, med = 12, large = 15
+            var size = 1*document.pizza.size.value
+
+            // ham = 3, pep = 5, mush = 4, pine = 2
+            var ham_price = 3 * document.pizza.ham.value
+            var pep_price = 5 * document.pizza.pep.value
+            var mush_price = 4 * document.pizza.mush.value
+            var pine_price = 2 * document.pizza.pine.value
+
+            var price = 0
+            var message = "";
+
+            // now to calculate the price (& discount according to rules stated at top)
+            price = size + ham_price + pep_price + mush_price + pine_price
+
+            if (price > 100) {
+                message="Your total order is $" + price + ". DING DING DING YOU HAVE EARNED A 10% DISCOUNT FOR PASSING A TOTAL OF $100. THANK YOU FOR YOUR SUPPORT. "
+                price = price * 0.9
+            } else if ((price >= 90) && (price <= 100)) {
+                message="Your total order is $" + price + ". DING DING DING YOU HAVE EARNED A 5% DISCOUNT FOR A TOTAL BETWEEN $90 and $100. THANK YOU FOR YOUR SUPPORT. "
+                price = price * 0.95
+            } else {
+                message=" Your total order is $" + price + ". No discount is available to you at this time. "
+                price = price
+            }
+            alert(message + "Your final total is $" + price + ".")
+        }
+
+    </script>
+</head>
+<body>
+    <p>Click the following button and see your calculated total!</p>
+    <form name="pizza" method="post" action="" onsubmit="return fun()">
+        Select the Size of your pizza:
+        <br />
+        <select name = "size">
+            <option value="10" selected>small</option>
+            <option value="12" selected>medium</option>
+            <option value="15" selected>large</option>
+        </select>
+        <br />
+        Select the Number of toppings:
+        <br /> # of Ham toppings: $3 per toppings
+        <input type="text" name="ham" value="1" size="5" maxlength="5">
+        <br /> # of Pepperoni toppings: $5 per toppings
+        <input type="text" name="pep" value="1" size="5" maxlength="5">
+        <br /> # of Mushroom toppings: $4 per toppings
+        <input type="text" name="mush" value="1" size="5" maxlength="5">
+        <br /> # of Pineapple toppings: $2 per toppings
+        <input type="text" name="pine" value="1" size="5" maxlength="5">
+        <br />
+        <input type="submit" name="submit" value="Calculate Total">
+        
+    </form>
+</body>
+</html>

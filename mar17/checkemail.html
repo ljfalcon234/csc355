@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check My Email</title>
+
+    <script language="javascript" type="text/javascript">
+        // why is this stuff colored as comments
+
+        function validate() {
+            var student_id = ""
+            var student_name = ""
+            var student_email = ""
+            var street = ""
+            var city = ""
+            var state = ""
+            var zip = ""
+
+            var length = ""
+            var subStr = ""
+            var indexOf = ""
+            var tmp = ""
+            var temp = ""
+
+            student_id = document.myForm.student_id.value
+            student_name = document.myForm.student_name.value
+            student_email = document.myForm.student_email.value
+            street = document.myForm.street.value
+            city = document.myForm.city.value
+            state = document.myForm.state.value
+            zip = document.myForm.zip.value
+
+            /* 
+                Add missing code here such that:
+                    [x] 1) if a text field is empty, remind the user
+                    [x] 2) convert statement name to upper cases (Wa or wa should be WA)
+                    [] 3) email address must be @stmartin.edu, if not, remind user
+            */
+
+            // check for empty text fields
+            if (student_id == "" || student_name == "" || student_email == "" || street == "" || city == "" || state == "" || zip == "") {
+                alert(message="One or more of the text fields below is empty/invalid. Please try again.")
+            }
+
+            // convert to uppercase
+            state = state.toUpperCase()
+
+            // check if email is @stmartin.edu 
+            // use slice?
+            var email_end = student_email.slice(-13)
+            if (email_end != "@stmartin.edu") {
+                alert(message="Email address is not valid SMU email. Please try again with an @stmartin.edu ending.")
+            }
+
+           return true
+        }    
+    </script>
+    <style type="text/css">
+        body {
+            background-color:steelblue
+        }
+        h2 {
+            color:darkblue
+        }
+        td {
+            font-size:10pt;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight:bold;
+            color:darkblue
+        }
+        input[type="text"] {
+            color:steelblue;
+            font-size:10pt;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight:bold;
+        }
+        table {
+            width:600px;
+            height:200px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <form action="" name="myForm" method="POST" onsubmit="return(validate())">
+            <tr>
+                <td colspan="4"><h2>Contact Information</h2></td>
+            </tr>
+            <tr>
+                <td>student ID: <input type="text" name="student_id" value="" /> </td>
+                <td>student name: <input type="text" name="student_name" value="" /> </td>
+                <td>student email: <input type="text" name="student_email" value="Enter your SMU email" /> </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Street: <input type="text" name="street" value="Street # and Street name" /> </td>
+                <td>City: <input type="text" name="city" value="Lacey" /> </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>State: <input type="text" name="state" value="WA" /> </td>
+                <td>Zip: <input type="text" name="zip" value="98503" /> </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input name="Submit" type="submit" value="Submit" />
+                    <input name="Reset" type="reset" value="Reset" />
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
