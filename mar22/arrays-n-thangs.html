@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation??</title>
+    <script type="text/javascript">
+        /*
+            - function must define an array having three elements, each is a string of a fruit
+            - use while loop to print out fruit strings
+            - define an array with three elements where each is a string of a vegetable
+            - use for loop to print out the veggie strings
+            - an array for food of which:
+                - its first 3 elements are from the first array (i.e. 3 fruit names)
+	            - its last 3 elements are from the second array (i.e. 3 vegetable names)
+	            - its two middle elements are the names of two kinds of meat (such as "pork" and "beef")
+            - Convert the elements of the third array to upper case and print each element. 
+        */
+       function FruitsAndVeggies() {
+            var Fruits = ["pineapple", "jackfruit", "kiwi"]
+            var Veggies = new Array("potatoes", "green onions", "mushroom")
+            var Foood = Fruits.concat("salami", "meatballs", Veggies)
+
+            var size = 0
+            var i = 0
+            var tmp = ""
+
+            size = Fruits.length
+
+            while (i < size) {
+                document.write(Fruits[i] + "<br />")
+                i++
+            }
+
+            document.write("<br />")
+            size = Veggies.length
+
+            for (i = 0; i < size; i++) {
+                document.write(Veggies[i] + "<br />")
+            }
+
+            document.write("<br />")
+            size = Foood.length
+            
+            for (i = 0; i < size; i++) {
+                tmp = Foood[i]
+                tmp = tmp.toUpperCase()
+                document.write(tmp + "<br />")
+            }
+
+            document.write("<br />")
+            //alert("checkin out the thingies")
+       }
+    </script>
+</head>
+<body>
+    <form action="3.php" name="MyForm" method="POST">
+        <input type="text" name="Name" value="" onclick="FruitsAndVeggies()" />
+        <br />
+        <input type="submit" name="Submit" />
+    </form>
+</body>
+</html>
