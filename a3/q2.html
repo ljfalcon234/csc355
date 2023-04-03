@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC367 Grade Form</title>
+    <link rel="stylesheet" href="q2-stylin.css">
+
+    <script type="text/javascript">
+        function calcGrade() {
+
+            var quiz1 = 1 * document.totalgrade.quiz1.value;  //5%
+            var quiz2 = 1 * document.totalgrade.quiz2.value;  
+            var assignment1 = 1 * document.totalgrade.assignment1.value; //5%
+            var assignment2 = 1 * document.totalgrade.assignment2.value;
+            var assignment3 = 1 * document.totalgrade.assignment3.value;   
+            var midterm = 1 * document.totalgrade.midterm.value;   //10%
+            var final = 1 * document.totalgrade.final.value;  //40%
+            var project = 1 * document.totalgrade.project.value;   //25%
+
+            if (quiz1 == "" || quiz2 == "" || assignment1 == "" || assignment2 == "" || assignment3 == "" || midterm == "" || final == "" || project == "") {
+                alert("One or more of the fields below is empty/invalid. Please resubmit and try again.")
+            }
+            else {
+                var total = quiz1/4 + quiz2/4 + assignment1/20 + assignment2/20 + assignment3/20 + midterm/10 + final/5 + project;
+
+                alert("Your total grade in CSC 367 is " + total + ".")
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>CSC367 Grade Form</h2>
+    <p>Input the grade of each item, and then you will know your total grade in the class.</p>
+
+    <br />
+
+    <form name="totalgrade" method="post" action="" onsubmit="return calcGrade()">
+
+        Quiz #1: <input type="text" name="quiz1" value="0">
+        <br />
+        Quiz #2: <input type="text" name="quiz2" value="0">
+        <br />
+        <br />
+        Assignment #1: <input type="text" name="assignment1" value="0">
+        <br /> 
+        Assignment #2: <input type="text" name="assignment2" value="0">
+        <br />
+        Assignment #3: <input type="text" name="assignment3" value="0">
+        <br />
+        <br />
+        Midterm Exam: <input type="text" name="midterm" value="0">
+        <br />
+        Final Exam: <input type="text" name="final" value="0">
+        <br />
+        Term Project: <input type="text" name="project" value="0">
+        <br />
+        <br />
+        <input type="submit" name="submit" value="Calculate Total">
+        <input type="reset" name="reset" value="Reset">
+        
+    </form>
+</body>
+</html>
