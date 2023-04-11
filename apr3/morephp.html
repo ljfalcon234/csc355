@@ -6,10 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculation With PHP</title>
 
+    <script type="text/javascript">
+        function validateForm() {
+			var a1 = document.calcFormA.assignment_1.value;
+			var a2 = document.calcFormA.assignment_2.value;
+			var a3 = document.calcFormA.assignment_3.value;
+			var midterm = document.calcFormA.midtermexam.value;
+			var final = document.calcFormA.finalexame.value;
+			var project = document.calcFormA.project.value;
+
+			if ((a1 == "") || (isNaN(a1)) || (a1 < 0) || (a1 > 100)) {
+				alert("1 It can not be empty, <0, or not a number");
+				document.calcFormA.a1.focus();
+				return false;
+			}
+
+			if ((a2 == "") || (isNaN(a2)) || (a2 < 0) || (a2 > 100)) {
+				alert("2 It can not be empty, <0, or not a number");
+				document.calcFormA.a2.focus();
+				return false;
+			}
+
+			if ((a3 == "") || (isNaN(a3)) || (a3 < 0) || (a3 > 100)) {
+				alert("3 It can not be empty, <0, or not a number");
+				document.calcFormA.assignment_3.focus();
+				return false;
+			}
+
+			if ((midterm == "") || (isNaN(midterm)) || (midterm < 0) || (midterm > 100)) {
+				alert("4 It can not be empty, <0, or not a number");
+				document.calcFormA.midterm.focus();
+				return false;
+			}
+
+			if ((final == "") || (isNaN(final)) || (final < 0) || (final > 100)) {
+				alert("5 It can not be empty, <0, or not a number");
+				document.calcFormA.final.focus();
+				return false;
+			}
+
+			if ((project == "") || (isNaN(project)) || (project < 0) || (project > 100)) {
+				alert("6 It can not be empty, <0, or not a number");
+				document.calcFormA.project.focus();
+				return false;
+			}
+			return true;
+
+		}
+
+
+		function validateForm2() {
+
+			var ltr = document.calcFormB.letter.value;
+
+
+			if ((ltr == "") || (!(isNaN(ltr))) || (ltr.length > 1)) {
+				alert("7 It can not be empty, <0, or not a number");
+				document.calcFormB.numGrade.focus();
+				return false;
+			}
+
+			return true;
+		}
+
+    </script>
+
 </head>
 <body>
     <form name="calcFormA" action="first.php" method="POST" onsubmit="return validateForm()">
-        
+        Grade of Assignment1: <input type="text" name="a1" value="">
+        <br />
+        Grade of Assignment2: <input type="text" name="a2" value="">
+        <br />
+        Grade of Assignment3: <input type="text" name="a3" value="">
+        <br /> 
+        Grade of Midterm Exam: <input type="text" name="midterm" value="">
+        <br />
+        Grade of Final Exam: <input type="text" name="final" value="">
+        <br />
+        Grade of Project: <input type="text" name="project" value="">
+        <br />
+        <br />
+        <input type="submit" name="submit" value="Calculate Total">
+		<input type="reset" name="reset" value="Reset">
     </form> 
+
+    <br />
+    <br />
+
+    <form name="calcFormB" action="second.php" method="POST" onsubmit="return validateForm2()">
+        Input Letter Grade Here: <input type="text" name="letter" value="">
+        <br />
+        <input type="submit" name="submitA" value="Show Numeric Grade">
+        <input type="reset" name="resetA" value="Reset">
+        <br />
+    </form>
 </body>
 </html>

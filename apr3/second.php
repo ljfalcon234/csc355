@@ -49,7 +49,7 @@ function fun2()
 	   </head>
 	   <body>";
 	 
-	$htmlbo = "
+	$htmlbottom = "
 	   </body>
 	</html>"; 
 	   

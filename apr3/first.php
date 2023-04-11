@@ -2,14 +2,14 @@
 
 function fun()
 {
-	$as1 = $_POST["assignment_1"];
-	$as2 = $_POST["assignment_2"];
-	$as3 = $_POST["assignment_3"];
-	$mid = $_POST["midtermexam"];
-	$fin = $_POST["finalexame"];	   
-	$pro = $_POST["project"];	
+	$asgnmnt1 = $_POST["a1"];
+	$asgnmnt2 = $_POST["a2"];
+	$asgnmnt3 = $_POST["a3"];
+	$midtm = $_POST["midterm"];
+	$finl = $_POST["final"];	   
+	$proj = $_POST["project"];	
 	
-	$grade = $as1*0.1 + $as2*0.1 + $as2*0.1 + $mid*0.2 + $fin*0.35 + $pro*0.15;	
+	$grade = $asgnmnt1*0.1 + $asgnmnt2*0.1 + $asgnmnt3*0.1 + $midtm*0.2 + $finl*0.35 + $proj*0.15;	
 	$letter = "";
 	
     if(($grade>90)&&($grade<=100))
@@ -60,7 +60,7 @@ function fun()
 	   </head>
 	   <body>";
 	 
-	$htmlbo = "
+	$htmlbottom = "
 	   </body>
 	</html>"; 
 	   
@@ -68,7 +68,7 @@ function fun()
 	print("<h2>Calculation Result</h2>");   
 	print("<table><tr><td><u>Numeric grade</u>: </td><td>$grade</td></tr>");
 	print("<tr><td><u>Letter grade</u>: </td><td>$letter</td></tr></table>");
-	print("$htmlbo");
+	print("$htmlbottom");
 }
 fun();
 ?>
