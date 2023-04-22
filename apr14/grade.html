@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> form validation </title>
+    <script type="text/javascript">
+        function validate() {
+            var as1 = document.grade_form.assignment_1.value;
+            var as2 = document.grade_form.assignment_2.value;
+            var as3 = document.grade_form.assignment_3.value;
+            var mid = document.grade_form.midterm_exam.value;
+            var fe = document.grade_form.final_exam.value;
+            var major = document.grade_form.major.value;
+            var total = 0;
+            if (as1 == "") {
+                alert("Assignment 1 can not be empty");
+                document.grade_form.assignment_1.focus();
+                return false;
+            }
+            if (as2 == "") {
+                alert("Assignment 2 can not be empty");
+                document.grade_form.assignment_2.focus();
+                return false;
+            }
+            if (as3 == "") {
+                alert("Assignment 3 can not be empty");
+                document.grade_form.assignment_3.focus();
+                return false;
+            }
+            if (mid == "") {
+                alert("midterm can not be empty");
+                document.grade_form.midterm_exam.focus();
+                return false;
+            }
+            if (fe == "") {
+                alert("final exam can not be empty");
+                document.grade_form.final_exam.focus();
+                return false;
+            }
+            if (major == "-1") {
+                alert("Course can not be empty");
+                document.grade_form.major.focus();
+                return false;
+            }
+            /*
+            total = (as1/100)*0.1+(as2/100)*0.1+(as3/100)*0.1
+            +(mid/100)*0.2+(fe/100)*0.5;
+            total = total*100;
+            alert("Your total grade is "+total);
+            */
+            return true;
+        }
+    </script>
+    <style type="text/css">
+        body {
+            background-color: pink;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        td,
+        p {
+            color: blue;
+            font-family: helvetica, serif;
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        input[type="text"] {
+            color: green;
+            font-family: helvetica, serif;
+            font-weight: bold;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Calculate Grade</h2>
+    <p>Assume that the full grade of each coursework is always 100. The weight of each assignement is 10%, the weight of
+        the midterm is 20%, the weight of the final exam is 50%</p>
+    <table width="400" height="300" border="0">
+        <form action="grade.php" method="POST" name="grade_form" onsubmit="return (validate())">
+            <tr>
+                <td>
+                    assignment #1</td>
+                <td><input type="text" name="assignment_1" value="" /></td>
+            </tr>
+            <tr>
+                <td>
+                    assignment #2</td>
+                <td><input type="text" name="assignment_2" value="" /></td>
+            </tr>
+            <tr>
+                <td>
+                    assignment #3</td>
+                <td><input type="text" name="assignment_3" value="" /></td>
+            </tr>
+            <tr>
+                <td>
+                    midterm exam</td>
+                <td>
+                    <input type="text" name="midterm_exam" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    final exam</td>
+                <td>
+                    <input type="text" name="final_exam" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    choose courses</td>
+                <td>
+                    <select name="course">
+                        <option value="-1" selected>[choose a course]</option>
+                        <option value="CS180">CSC180</option>
+                        <option value="CS280">CSC280</option>
+                        <option value="CS380">CS380</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="Calculate Total">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+                <td></td>
+            </tr>
+        </form>
+    </table>
+</body>
